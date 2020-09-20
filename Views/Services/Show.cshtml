@@ -1,0 +1,21 @@
+﻿@model ServiceItem
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keywords = Model.MetaKeywords;
+}
+
+<div>
+    <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 25px; text-shadow: 4px 4px 4px #aaa; font-variant: small-caps;">
+        @Model.Title
+    </h2>
+    <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 25px; text-shadow: 4px 4px 4px #aaa;">
+        @Model.Subtitle
+    </h3>
+    <div>
+        <img src="~/images/@Model.TitleImagePath" class="img-block" />
+    </div>
+</div>
+<div>
+    @Html.Raw(Model.Text)
+</div>
